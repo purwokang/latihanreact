@@ -1,17 +1,26 @@
 import React, {Component} from "react";
-import Component1 from "./components/Component1";
-import Component2 from "./components/Component2";
+import Biodata from "./components/Biodata";
 
 class App extends Component{
   render(){
     return (
     <div>
-    <Component1/>
-    <Component2/>
+    <Biodata nama="Kang Purwo" semester="1" hobi={<Hobi />} />
+    <Biodata nama="Budi" semester="3" />
     </div>
-    )
+    );
   }
 }
+
+const Hobi = ()=>{
+return(
+<ul>
+  <li>Ngoding</li>
+  <li>Berenang</li>
+  <li>Jogging</li>
+</ul>
+);
+};
 
 
 

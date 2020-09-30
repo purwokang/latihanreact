@@ -1,11 +1,13 @@
 import React, {Component} from "react";
+import C3 from "./Component3";
+
 
 class Component1 extends Component{
 render(){
     return(
         <div>
-            <h1>Halo Dunia</h1>
-            <h1>Halo Dunia dalam React!</h1>
+            <h1>Ini Statefull --Component1</h1>
+            <p><i><C3/></i></p>
         </div>
     )
 }
