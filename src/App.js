@@ -1,27 +1,25 @@
-import React, {Component} from "react";
-import Biodata from "./components/Biodata";
+import React, { Component } from "react";
+// import Biodata from "./components/Biodata";
+// import NewBiodata from "./components/NewBiodata";
+// import Component4 from "./components/Component4";
+// import Counter from "./components/Counter";
+// import FormInput from "./components/FormInput";
 
-class App extends Component{
-  render(){
+
+import Posts from "./components/Post"
+
+
+class App extends Component {
+  render() {
     return (
-    <div>
-    <Biodata nama="Kang Purwo" semester="1" hobi={<Hobi />} />
-    <Biodata nama="Budi" semester="3" />
-    </div>
+      <div>
+        <Post />
+
+      </div>
     );
   }
 }
 
-const Hobi = ()=>{
-return(
-<ul>
-  <li>Ngoding</li>
-  <li>Berenang</li>
-  <li>Jogging</li>
-</ul>
-);
-};
-
-
-
 export default App;
+
+// next video 10
