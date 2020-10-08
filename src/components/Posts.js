@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Post from "./Post"
+import Post from "./Post";
 import axios from "axios";
 
 class Posts extends Component {
@@ -9,10 +9,11 @@ class Posts extends Component {
 
     getData = () => {
         axios
-            .get('https://jsonplaceholder.typicode.com/posts/')
+            .get("https://jsonplaceholder.typicode.com/posts/")
             .then(result => {
+
                 this.setState({
-                    post: result.data
+                    posts: result.data
                 });
             })
             .catch(err => {
@@ -24,14 +25,10 @@ class Posts extends Component {
         this.getData();
     }
 
-
     render() {
-        return (
-            <div>
-                {console.log(this.state.posts)}
-                <Post title="Hallo react" />
-            </div>
-        )
+        return this.state.posts.map(post => {
+            return <Post key={post.id} title={post.title} body={post.body} />;
+        });
     }
 }
 
